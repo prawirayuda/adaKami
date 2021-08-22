@@ -1,37 +1,21 @@
 import React from 'react'
-import { StyleSheet, Text, View, Image, TextInput} from 'react-native'
+import { ScrollView } from 'react-native'
+import SampleComponent from './src/components/sampleComponent'
+import StylingReactNativeComponent from './src/components/sampleComponent/StylingRN'
 
 const App = () => {
   return (
-    <View>
-      <View style={styles.container}>
-      </View>
-        <Text>Prawira </Text>
-        <Yuda />
-        <Photo />
-        <TextInput style={{borderWidth: 1}}/>
-    </View>
+    <ScrollView>
+      <SampleComponent/>
+      <StylingReactNativeComponent/>
+      
+    </ScrollView>
   )
 }
 
-const Yuda = () => {
-  return <Text>My component</Text>
-}
 
-const Photo = () => {
-  return <Image source={{uri :'https://placeimg.com/640/480/any'}} style={styles.img} />
-}
+
 
 export default App
 
-const styles = StyleSheet.create({
-  container : {
-    width : 80,
-    height :80,
-    backgroundColor: '#09abde'
-  },
-  img :{
-    width : 80,
-    height :80
-  }
-})
+
